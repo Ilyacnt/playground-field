@@ -1,0 +1,74 @@
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  border-radius: 15px;
+
+  padding: 25px;
+
+  min-width: 500px;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.ErrorLabel {
+  color: tomato;
+}
+
+.ErrorLabel .Input {
+  border-color: tomato;
+}
+
+.Input {
+  border: 2px solid white;
+  border-radius: 10px;
+
+  padding: 10px;
+  width: 100%;
+
+  font-weight: bold;
+
+  font-size: 1.1em;
+}
+
+.Button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+
+  align-self: flex-end;
+}
+
+.Button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.Button:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.Button[disabled] {
+  color: lightgray;
+  cursor: default;
+}

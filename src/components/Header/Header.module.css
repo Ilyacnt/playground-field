@@ -1,0 +1,38 @@
+.Header {
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border-bottom: 2px solid rgb(var(--background-color));
+
+  background: rgba(var(--background-color), 0.3);
+}
+
+.Logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.Links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.Link {
+  color: rgb(var(--text-color));
+}
+
+.Link:hover {
+  color: rgb(var(--primary-color));
+}
+
+.Logo .Link {
+  color: rgb(var(--text-color));
+  text-decoration: none;
+}

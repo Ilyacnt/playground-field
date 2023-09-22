@@ -1,0 +1,36 @@
+.TodoItem {
+  position: relative;
+  background: rgb(var(--background-color), 0.3);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.DeleteButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.Info {
+  display: grid;
+  grid-template-areas:
+    'title checkbox'
+    'body checkbox';
+  column-gap: 20px;
+  row-gap: 5px;
+}
+
+.Title {
+  grid-area: title;
+  font-weight: bold;
+}
+
+.Body {
+  grid-area: body;
+}
+
+.Checkbox {
+  grid-area: checkbox;
+}
