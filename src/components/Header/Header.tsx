@@ -19,6 +19,9 @@ const Header = () => {
         <Link className={styles.Link} to={'/todos'}>
           Todos
         </Link>
+        <Link className={styles.Link} to={'/crypto'}>
+          Crypto
+        </Link>
       </div>
     </header>
   )

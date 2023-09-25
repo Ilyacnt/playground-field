@@ -5,8 +5,8 @@ import styles from './GoodsPage.module.css'
 
 const GoodsPage = () => {
   const [newProductName, setNewProductName] = useState<string>('')
-  const { data = [], isLoading, isError } = useGetGoodsQuery('')
-  const [addGoodsItem] = useAddGoodsItemMutation()
+  const { data: goods = [], isLoading, isError } = useGetGoodsQuery('')
+  const [addGoodsItem, { isLoading: isLoadingAddGoods }] = useAddGoodsItemMutation()
 
   const onInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewProductName(event.target.value)
@@ -28,7 +28,7 @@ const GoodsPage = () => {
           onInput={onInputHandler}
         />
         <button className={styles.Button} onClick={onButtonHandler}>
-          Add product
+          {isLoadingAddGoods ? 'Loading...' : 'Add product'}
         </button>
       </div>
 
@@ -37,7 +37,7 @@ const GoodsPage = () => {
       ) : isError ? (
         <div>Error...</div>
       ) : (
-        data.map((goodsItem) => (
+        goods.map((goodsItem) => (
           <GoodsItem key={goodsItem.id} id={goodsItem.id} name={goodsItem.name} />
         ))
       )}

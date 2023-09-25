@@ -7,6 +7,7 @@ const AuthPage = lazy(() => import('./pages/AuthPage/AuthPage'))
 const TodosPage = lazy(() => import('./pages/TodosPage/TodosPage'))
 const GoodsPage = lazy(() => import('./pages/GoodsPage/GoodsPage'))
 const ChartPage = lazy(() => import('./pages/ChartPage/ChartPage'))
+const CryptoPage = lazy(() => import('./pages/CryptoPage/CryptoPage'))
 
 const Layout = () => {
   return (
@@ -19,6 +20,7 @@ const Layout = () => {
             <Route path="/todos" element={<TodosPage />} />
             <Route path="/goods" element={<GoodsPage />} />
             <Route path="/chart" element={<ChartPage />} />
+            <Route path="/crypto" element={<CryptoPage />} />
             <Route path="*" element={<Navigate to="/auth" />} />
           </Routes>
         </Suspense>
