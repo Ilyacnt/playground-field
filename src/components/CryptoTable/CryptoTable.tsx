@@ -23,7 +23,7 @@ const CryptoTable = ({ data = [] }: CryptoTableProps) => {
               <img src={coin.icon} alt={`${coin.name} icon`} />
               {coin.name}
             </td>
-            <td>{coin.price}</td>
+            <td>{coin.price.toFixed(2)}</td>
           </tr>
         ))}
       </tbody>

@@ -1,2 +1,28 @@
 .CryptoTable {
+  max-width: 90%;
+  min-width: 70%;
+  border: 2px solid rgb(var(--text-color));
+  border-top: 10px solid rgb(var(--text-color));
+  border-collapse: collapse;
+}
+
+.CryptoTable td,
+.CryptoTable th {
+  text-align: center;
+  padding: 5px;
+}
+
+.CryptoTable th {
+  border-bottom: 3px solid rgb(var(--text-color));
+}
+
+.CryptoTable tr td:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+.CryptoTable img {
+  width: 30px;
 }
