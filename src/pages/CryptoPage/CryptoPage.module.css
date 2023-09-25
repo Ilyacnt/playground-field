@@ -9,3 +9,29 @@
 
   width: 100%;
 }
+
+.PageInput {
+  padding: 5px;
+}
+
+.PageButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.PageButton {
+  border: none;
+  border-radius: 10px;
+  background: rgb(var(--primary-color));
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.PageButton:hover {
+  background: rgb(var(--primary-color), 0.9);
+}
+
+.PageButton:active {
+  background: rgb(var(--primary-color), 0.8);
+}

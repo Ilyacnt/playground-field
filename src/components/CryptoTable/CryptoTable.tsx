@@ -3,9 +3,10 @@ import styles from './CryptoTable.module.css'
 
 interface CryptoTableProps {
   data?: ICryptoCoin[]
+  loading?: boolean
 }
 
-const CryptoTable = ({ data = [] }: CryptoTableProps) => {
+const CryptoTable = ({ data = [], loading = false }: CryptoTableProps) => {
   return (
     <table className={styles.CryptoTable}>
       <thead>
@@ -27,6 +28,7 @@ const CryptoTable = ({ data = [] }: CryptoTableProps) => {
           </tr>
         ))}
       </tbody>
+      {loading && <div className={styles.Loader}>Loading...</div>}
     </table>
   )
 }
